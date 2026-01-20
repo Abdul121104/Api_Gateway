@@ -6,6 +6,7 @@ import authRoutes from "./routes/authRoutes.js";
 import apiClientRoutes from "./routes/apiClientRoutes.js";
 import routeRoutes from "./routes/routeRoutes.js";
 import cacheRoutes from "./routes/cacheRoutes.js";
+import analyticsRoutes from "./routes/analyticsRoutes.js";
 import gatewayProxy from "./routes/gatewayProxy.js";
 
 const app = express();
@@ -23,6 +24,7 @@ app.use("/auth", authRoutes);
 app.use("/api/clients", apiClientRoutes);
 app.use("/api/routes", routeRoutes);
 app.use("/api/cache", cacheRoutes);
+app.use("/api/analytics", analyticsRoutes);
 
 // Gateway proxy (catch-all - must be last)
 app.use("/", gatewayProxy);
